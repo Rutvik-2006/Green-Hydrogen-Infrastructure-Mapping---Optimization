@@ -133,8 +133,8 @@ MIT License
 
 ## 📬 Contact
 
-👤 Project Lead: *Your Name*  
-✉️ Email: *your.email@example.com*
+👤 Project Lead: *Rutvik Gudaliya*  
+✉️ Email: *gudaliyarutvik9898@gmail.com*
 
 
 > 💡 Ready to build the future of green hydrogen? Clone, run, and make it better!
