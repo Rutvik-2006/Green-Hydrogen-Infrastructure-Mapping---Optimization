@@ -10,7 +10,9 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [
-    react(),
+    react()
+    base: "/hydromap/",
+,
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
