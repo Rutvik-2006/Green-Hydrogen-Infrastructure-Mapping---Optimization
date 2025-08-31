@@ -1,24 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Green Hydrogen Infrastructure India - Mapping & Optimization Platform</title>
-    <meta name="description" content="Interactive mapping platform for green hydrogen infrastructure in India. Visualize plants, storage, pipelines, and renewable energy sources. AI-powered site optimization for strategic investments." />
-    <meta name="author" content="Green Hydrogen Infrastructure India" />
+<html>
+<head>
+  <title>Google Maps Free Demo</title>
+</head>
+<body>
+  <h2>Hydrogen plan sites (India)</h2>
 
-    <meta property="og:title" content="Green Hydrogen Infrastructure India - Mapping & Optimization" />
-    <meta property="og:description" content="Interactive mapping platform for green hydrogen infrastructure in India with AI-powered site recommendations." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <!-- This is a free embedded map, no API key required -->
+<iframe
+ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15281597.148963125!2d72.09663637396697!3d20.75652130214902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1756533066658!5m2!1sen!2sin" 
+    width="1420"
+    height="665"
+    style="border:0;"
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+    <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14153.784528541051!2d71.91133898715817!3d27.51759570000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3938ab6d9bc0c01f%3A0x9d99db4fb6f08825!2sBhadla%20Solar%20Park!5e0!3m2!1sen!2sin!4v1756534199595!5m2!1sen!2sin"
+     width="600" 
+     height="450" 
+     style="border:0;" 
+     allowfullscreen="" 
+     loading="lazy" 
+     referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</iframe>
+</body>
+</html>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Maps with Multiple Markers</title>
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h2>India Map with Markers</h2>
+  <div id="map"></div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <script>
+    function initMap() {
+      // Center India
+      var india = { lat: 22.351115, lng: 78.667742 };
+
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 5,
+        center: india,
+      });
+
+      // Add some markers
+      var markers = [
+        { lat: 27.4720, lng: 71.9600, title: "Bhadla Solar Park (Phalodi, Rajasthan)" },
+        { lat: 19.0760, lng: 72.8777, title: "Mumbai" },
+        { lat: 13.0827, lng: 80.2707, title: "Chennai" },
+        { lat: 22.5726, lng: 88.3639, title: "Kolkata" }
+      ];
+
+      markers.forEach(function(loc) {
+        new google.maps.Marker({
+          position: { lat: loc.lat, lng: loc.lng },
+          map: map,
+          title: loc.title
+        });
+      });
+    }
+  </script>
+
+  <!-- Replace YOUR_API_KEY with your Google Maps API Key -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
+</body>
 </html>
